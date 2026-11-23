@@ -33,8 +33,6 @@ Reproduced by running the notebook's exact code on the public dataset: 80/20 tra
 
 For context, always predicting "no churn" scores 79.6% accuracy but catches zero churners. XGBoost is the best overall model here and catches 218 of 393 actual churners in the test set.
 
-![Model comparison and XGBoost confusion matrix](results_model_comparison.png)
-
 **Honest limitation:** all three models still miss many churners (best recall 55.5%). The dataset is imbalanced (80/20) and the notebook trains with default class weights. Handling the imbalance (class weights, SMOTE, threshold tuning) is the natural next step, and it is exactly what my [Health Check ML](https://github.com/ahmedharb2004/Health-Check-ML) project explores.
 
 ---
@@ -91,7 +89,6 @@ jupyter notebook "Machine Learning Projec The last update.ipynb"
 
 ```
 ├── Machine Learning Projec The last update.ipynb   # full analysis notebook
-├── results_model_comparison.png                    # real test-set results figure
 └── README.md
 ```
 
